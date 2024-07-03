@@ -59,7 +59,7 @@ public class Robot extends TimedRobot {
 
   @Override
   public void teleopPeriodic() {
-    swerveDrive.drive(new Translation2d(m_Controller.getLeftX(), -m_Controller.getLeftY()), m_Controller.getRightX(), useFieldRelative, false);
+    swerveDrive.drive(new Translation2d(m_Controller.getLeftX(), -m_Controller.getLeftY()), -m_Controller.getRightX(), useFieldRelative, false);
     if (m_Controller.getAButtonPressed()) {
       useFieldRelative = !useFieldRelative;
     }
